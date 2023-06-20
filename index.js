@@ -73,6 +73,17 @@ console.log(levels[0]);
 const app = express();
 const port = 8080;
 
+app.use(express.json());
+
+app.get('/api/levels', (req, res) => {
+    res.send({count: levels.length});
+});
+
+app.get('/api/levels/:levelId', (req, res) => {
+    const levelId = req.params.levelId;
+    res.send(levels[levelId]);
+});
+
 app.use(express.static('public'));
 
 app.listen(port, () => {
