@@ -28,6 +28,7 @@ function readLevelData() {
         };
 
         const lines = singleLevelData.split('\n');
+
         for (let y = 0; y < lines.length; y += 1) {
             const line = [];
             for (let x = 0; x < lines[y].length; x += 1) {
@@ -75,7 +76,7 @@ const port = 8080;
 
 app.use(express.json());
 
-app.get('/api/levels', (req, res) => {
+app.get('/api/levels', (req, res) => { // durch api callback funktion aufrufen
     res.send({count: levels.length});
 });
 
