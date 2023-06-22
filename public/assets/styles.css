@@ -1,0 +1,11 @@
+#playfield {
+    position: relative;
+}
+
+.tile {
+    image-rendering: pixelated;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
