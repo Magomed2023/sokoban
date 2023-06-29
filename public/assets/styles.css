@@ -1,5 +1,7 @@
 #playfield {
     position: relative;
+    flex-grow: 1;
+    flex-shrink: 0;
 }
 
 .tile {
@@ -8,4 +10,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }

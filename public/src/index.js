@@ -34,6 +34,8 @@ window.onload = async function () {
         const playfield = document.getElementById('playfield');
         playfield.innerHTML = '';
 
+        playfield.style.width = `${level.level[0].length * TILE_SIZE}px`;
+
         function drawTile(image, x, y) {
 
             const tile = document.createElement('div');

@@ -1,7 +1,18 @@
 // SERVER
-
+import 'dotenv/config';
+import { MongoClient } from 'mongodb';
 import express from 'express';
 import fs from 'node:fs/promises';
+
+const url = process.env.MONGO_CS;
+const client = new MongoClient(url);
+
+const dbName = 'Sokoban';
+
+await client.connect();
+console.log('Connected successfully to database');
+const db = client.db(dbName);
+const collection = db.collection('highscores');
 
 const levels = [];
 
@@ -69,7 +80,7 @@ function readLevelData() {
     }
 }
 readLevelData();
-console.log(levels[0]);
+// console.log(levels[0]);
 
 const app = express();
 const port = 8080;
