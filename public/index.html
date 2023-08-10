@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="de">
-
     <head>
-
+        <!-- Dies ist ein Kommentar -->
         <title>Sokoban</title>
         <script type="text/javascript" src="src/index.js"></script>
         <link rel="stylesheet" href="assets/styles.css">
-        
     </head>
-
-        <!--Kommentar-->
-
     <body>
         <h1>Sokoban</h1>
-        <select id = "levelSelect"></select>
+        <input type="text" id="username" placeholder="Username">
+        <select id="levelSelect"></select>
         <p>Score: <span id="score">0</span></p>
         <p>Score with invalid moves: <span id="scoreWithInvalidMoves">0</span></p>
         <p id="winMessage"></p>
         <div class="row">
             <div id="playfield"></div>
-            <div>Highscores:</div>
+            <div>
+                <h2>Highscores:</h2>
+                <div id="scores"></div>
+            </div>
         </div>
-        
     </body>
-
 </html>
